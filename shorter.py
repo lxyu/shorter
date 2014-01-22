@@ -53,12 +53,12 @@ def initialize_database():
 
 
 @app.route("/")
-def index():
+def greeting():
     return "Welcome to url shorten service!"
 
 
 @app.route("/url", methods=["POST"])
-def short():
+def shorten():
     def _save(url):
         for i in range(10):
             try:
