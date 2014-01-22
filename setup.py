@@ -1,11 +1,11 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 version = "0.1"
 
 
 setup(name="shorter",
       version=version,
-      description="Simple web app to create a short url service.",
+      description="Robust url shorten service with zero config.",
       long_description=open("README.rst").read(),
       classifiers=[],
       keywords="url short shorter flask",
@@ -13,7 +13,7 @@ setup(name="shorter",
       author_email="i@lxyu.net",
       url="",
       license="MIT",
-      packages=find_packages(exclude=["ez_setup", "examples", "tests"]),
+      py_modules=['shorter'],
       include_package_data=True,
       zip_safe=False,
       entry_points={"console_scripts": ["shorter = shorter:main"]},
