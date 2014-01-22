@@ -1,0 +1,8 @@
+.DS_Store
+.env
+shorter_config.py
+*.db
+*.pyc
+*.egg-info/
+dist
+__pycache__
