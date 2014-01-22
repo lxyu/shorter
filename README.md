@@ -1,5 +1,7 @@
 # Shorter
 
+[![Build Status](https://travis-ci.org/lxyu/shorter.png?branch=master)](https://travis-ci.org/lxyu/shorter)
+
 Simple flask app to create a short url service.
 
 Creates a robust url shorten service with zero config.
