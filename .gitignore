@@ -4,5 +4,6 @@ shorter_config.py
 *.db
 *.pyc
 *.egg-info/
+build/
 dist
 __pycache__

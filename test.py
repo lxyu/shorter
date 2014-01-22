@@ -27,7 +27,7 @@ class FlaskrTestCase(unittest.TestCase):
     def testFormShorten(self):
         res = self.app.post('/url', data=dict(url='http://google.com'))
         assert res.status_code == 200
-        short = str(res.data, res.charset)
+        short = res.data.decode(res.charset)
         assert len(short) == SHORT_URL_LENGTH
         assert all(c in string.ascii_letters for c in short)
 
@@ -37,7 +37,7 @@ class FlaskrTestCase(unittest.TestCase):
         assert res.status_code == 200
         assert 'application/json' == res.content_type
 
-        _json = json.loads(str(res.data, res.charset))
+        _json = json.loads(res.data.decode(res.charset))
         assert "short" in _json and len(_json["short"]) == SHORT_URL_LENGTH
         assert all(c in string.ascii_letters for c in _json["short"])
 
